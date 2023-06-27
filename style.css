@@ -105,19 +105,20 @@ input {
     padding: 0.5em;
     display: flex;
     border-radius: 10px;
-    min-height: 3em;
+    height: 4em;
     transition: box-shadow 0.5s ease-out;
+    overflow: hidden;
 }
 
 .main-content > .sector-card:hover {
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     transition: box-shadow 0.5s ease-out;
 
 }
 
 .main-content > .sector-card > .sec-img {
-    background: url('res/34.jpg');
-    /* border: 1px solid red; */
+    /* background: url('res/34.jpg'); */
+    background-color: rgb(0 0 0 / 0.3);
     border-radius: 10px;
     min-width: 20%;
     background-size: cover;
@@ -128,7 +129,7 @@ input {
     margin-left: 1em;
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
 }
 
 .main-content > .sector-card > .sec-content > div:nth-child(1) {
@@ -142,6 +143,29 @@ input {
     color: var(--clr_dark2);
     font-style: italic;
 }
+
+.main-content > .sector-card > .sec-content > div:nth-child(3) {
+    margin-top: 2%;
+    display: flex;
+    justify-content: end;
+}
+
+.main-content > .sector-card > .sec-content > div:nth-child(3) > span {
+    font-size: 0.7em;
+    border-radius: 5px;
+    padding: 0.2em;
+    background-color: inherit;
+    color: var(--clr_dark2);
+    border: 1px solid var(--clr_dark1);
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+}
+
+.main-content > .sector-card > .sec-content > div:nth-child(3) > span:hover {
+    background-color: var(--clr_light1);
+    transition: background-color 0.2s ease-out;
+}
+
 
 @media (max-width: 500px) {
     
@@ -190,6 +214,18 @@ input {
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
         transition: box-shadow 0.5s ease-out;
     
+    }
+
+    .main-content > .sector-card > .sec-content > div:nth-child(3) > span {
+        background-color: inherit;
+        transition: background-color 0.2s ease-out;
+        color: var(--clr_dark2);
+        border: 1px solid var(--clr_dark3);
+    }
+    
+    .main-content > .sector-card > .sec-content > div:nth-child(3) > span:hover {
+        background-color: #404040;
+        transition: background-color 0.2s ease-out;
     }
     
 
